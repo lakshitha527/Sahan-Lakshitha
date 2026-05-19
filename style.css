@@ -1,0 +1,394 @@
+/* ===================================================== */
+/*                 GLOBAL STYLES (ALL PAGES)             */
+/* ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+
+/* ===================================================== */
+/*                 HEADER + NAVIGATION                   */
+/*   (home.html, about.html, courses.html, contact)     */
+/* ===================================================== */
+
+header {
+    background: #0f3057;
+    padding: 20px 0;
+    color: white;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-left: 100px;
+    text-decoration: none;
+    font-weight: 1000;
+}
+
+nav a:hover {
+    color: #00b894;
+}
+
+/* Active Navigation */
+nav ul li a.active {
+    color: #1cc88a;
+    font-weight: bold;
+}
+
+
+/* ===================================================== */
+/*                     HOME.HTML                         */
+/* ===================================================== */
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #00b894;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #019875;
+}
+
+.about {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+/* ===================================================== */
+/*                    CONTACT.HTML                       */
+/* ===================================================== */
+
+.page-title {
+    background: #dfe6e9;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+/* ===================================================== */
+/*                LOGIN.HTML (Old Login Section)         */
+/* ===================================================== */
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 10px;
+}
+
+.social-login button {
+    width: 80%;
+    margin: 5px 0;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.google { background-color: #db4437; color: white; }
+.facebook { background-color: #4267B2; color: white; }
+.github { background-color: #333; color: white; }
+
+.divider {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+form input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+.signin-btn {
+    width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* ===================================================== */
+/*         LOGIN + REGISTER (AUTHENTICATION DESIGN)     */
+/* ===================================================== */
+
+.auth-body {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.auth-box {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.auth-box h2 {
+    margin-bottom: 20px;
+}
+
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-box input {
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.auth-box .btn {
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-box a {
+    color: #00b894;
+    text-decoration: none;
+}
+
+.auth-box a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===================================================== */
+/*                     ABOUT.HTML                        */
+/* ===================================================== */
+
+.about-hero {
+    background: linear-gradient(to right, #4e73df, #1cc88a);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.about-hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.about-hero p {
+    font-size: 18px;
+}
+
+.about-content {
+    padding: 50px 10%;
+    background-color: #f8f9fc;
+}
+
+.about-box {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.about-box:hover {
+    transform: translateY(-5px);
+}
+
+.about-box h2 {
+    color: #4e73df;
+    margin-bottom: 15px;
+}
+
+.about-box ul {
+    padding-left: 20px;
+}
+
+.about-box ul li {
+    margin-bottom: 8px;
+}
+
+
+/* ===================================================== */
+/*                    COURSES.HTML                       */
+/* ===================================================== */
+
+.course-detail {
+    padding: 80px 15%;
+    background: #f8fafc;
+}
+
+.course-detail h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+.course-detail p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #4b5563;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    background: #111827;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #2563eb;
+}
+
+
+/* ===================================================== */
+/*                        FOOTER                         */
+/* ===================================================== */
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+
+/* ===================================================== */
+/*                      RESPONSIVE                       */
+/* ===================================================== */
+
+@media(max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+}
